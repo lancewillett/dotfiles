@@ -125,11 +125,3 @@ function fname() {
 if [ -f ~/.bashrc ]; then
 . ~/.bashrc
 fi
-
-function white() {
-	for file in `find . -type f -name \*.php`
-		do echo $file
-		php /home/wpcom/public_html/bin/whitespace-check.php $file
-		echo ' '
-	done
-}

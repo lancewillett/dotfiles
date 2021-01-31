@@ -8,3 +8,7 @@ ServerAliveInterval 20
 
 # Conserve bandwith. (Compression is off by default.)
 Compression yes
+
+# Use ssh keys on remote hosts
+# Useful for git cloning on a remote server
+ForwardAgent yes
