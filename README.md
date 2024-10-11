@@ -8,3 +8,5 @@ My dotfiles include:
 - .ssh/config - SSH config file, props http://andy.wordpress.com/2010/06/14/my-ssh-config-setup/
 - .vimrc - vim text editing, https://www.vim.org/
 - fish_prompt.fish - Fish shell prompt config, https://fishshell.com/
+- kitty.conf - Kitty terminal settings, https://sw.kovidgoyal.net/kitty/
+- nvim/init.vim - NeoVim settings, https://neovim.io/
