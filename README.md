@@ -10,3 +10,4 @@ My dotfiles include:
 - fish_prompt.fish - Fish shell prompt config, https://fishshell.com/
 - kitty.conf - Kitty terminal settings, https://sw.kovidgoyal.net/kitty/
 - nvim/init.vim - NeoVim settings, https://neovim.io/
+- .gitconfig - GitHub and git settings (name, email) for pushing to repos
