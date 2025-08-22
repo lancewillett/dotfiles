@@ -4,6 +4,14 @@ export SVN_EDITOR='vim'
 
 # prompt
 export PS1='\w\$ '
+# Update the PS1 variable to include the Git branch
+# export PS1='\w$(__git_ps1 " (%s)")\$ '
+
+# git branch in prompt
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+PS1='\w$(parse_git_branch) \$ '
 
 # history
 export HISTCONTROL=erasedups
@@ -44,6 +52,8 @@ alias there='cd $THERE_PWD'
 
 # Git
 alias deletemerged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+# faster git branch exit
+alias trunkup='git checkout trunk; git pull -p';
 
 # Local screens
 alias swork='screen -x work'

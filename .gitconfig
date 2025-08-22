@@ -3,3 +3,5 @@
 [user]
 	email = <email>
 	username = <GitHub.com username>
+[push]
+	autoSetupRemote = true
