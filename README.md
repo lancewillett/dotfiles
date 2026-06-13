@@ -9,5 +9,6 @@ My dotfiles include:
 - .vimrc - vim text editing, https://www.vim.org/
 - fish_prompt.fish - Fish shell prompt config, https://fishshell.com/
 - kitty.conf - Kitty terminal settings, https://sw.kovidgoyal.net/kitty/
+- ghostty.conf - Ghostty terminal settings, https://ghostty.org/
 - nvim/init.vim - NeoVim settings, https://neovim.io/
 - .gitconfig - GitHub and git settings (name, email) for pushing to repos
