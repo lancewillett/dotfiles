@@ -11,7 +11,18 @@ export PS1='\w\$ '
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-PS1='\w$(parse_git_branch) \$ '
+
+# Green cwd, plain git branch, and a $ that turns red when the last command failed
+__bash_prompt() {
+  local ec=$?
+  local green='\[\033[32m\]' red='\[\033[31m\]' reset='\[\033[0m\]'
+  if [ $ec -ne 0 ]; then
+    PS1="${green}\w${reset}\$(parse_git_branch) ${red}\$${reset} "
+  else
+    PS1="${green}\w${reset}\$(parse_git_branch) \$ "
+  fi
+}
+PROMPT_COMMAND=__bash_prompt
 
 # history
 export HISTCONTROL=erasedups
