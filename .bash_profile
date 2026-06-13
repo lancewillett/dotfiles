@@ -11,8 +11,8 @@ export PS1='\w\$ '
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-# Faithful bash port of the old fish prompt (fish_prompt.fish):
-# green cwd, plain git branch, and a $ that turns red when the last command failed.
+
+# Green cwd, plain git branch, and a $ that turns red when the last command failed
 __bash_prompt() {
   local ec=$?
   local green='\[\033[32m\]' red='\[\033[31m\]' reset='\[\033[0m\]'
